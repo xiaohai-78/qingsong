@@ -1,0 +1,60 @@
+# 本地项目所需要的容器
+# 镜像报错的话可能是网络问题，可以先配置阿里云镜像，可查看：https://cr.console.aliyun.com/cn-shanghai/instances/mirrors
+services:
+  qingsong-mysql:
+    image: mysql:8
+    container_name: qingsong-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    ports:
+      - "3307:3306" # 修改了端口
+    volumes:
+      - ./mysql/data:/var/lib/mysql # 数据持久化
+    networks:
+      - qingsong-network
+    restart: always
+
+  qingsong-redis:
+    image: redis:6
+    container_name: qingsong-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - qingsong-network
+    volumes:
+      - ./redis/data:/data
+    restart: always
+
+  qingsong-rabbitmq:
+    image: rabbitmq:3.12.6-management
+    container_name: qingsong-rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    ports:
+      - "6672:5672" # 这个端口用于RabbitMQ通信，改了端口，默认端口是5672
+      - "15672:15672"  # 这个端口用于RabbitMQ管理界面
+    volumes:
+      - ./rabbitmq/data:/var/lib/rabbitmq
+    networks:
+      - qingsong-network
+    restart: always
+
+  qingsong-nacos:
+    image: nacos/nacos-server:v2.0.3
+    container_name: qingsong-nacos
+    environment:
+      MODE: standalone
+      PREFER_HOST_MODE: hostname
+      TZ: Asia/Shanghai
+    volumes:
+      - ./nacos-data:/home/nacos/data
+    ports:
+      - "8848:8848"
+    networks:
+      - qingsong-network
+    restart: always
+
+networks:
+  qingsong-network:
+    driver: bridge
