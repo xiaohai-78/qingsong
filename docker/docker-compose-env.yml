@@ -7,7 +7,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 123456
     ports:
-      - "3307:3306" # 修改了端口
+      - "3306:3306" # 修改了端口
     volumes:
       - ./mysql/data:/var/lib/mysql # 数据持久化
     networks:

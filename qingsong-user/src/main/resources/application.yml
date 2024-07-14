@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: qingsong-user
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://qingsong-mysql:3306/db_qingsong?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&rewriteBatchedStatements=true&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useLegacyDatetimeCode=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf
+    username: root
+    password: 123456
+
+
+server:
+  port:
+
