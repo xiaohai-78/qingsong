@@ -41,6 +41,7 @@ services:
     restart: always
 
   qingsong-nacos:
+    # 登录页面：http://localhost:8848/nacos/#/login
     image: nacos/nacos-server:v2.0.3
     container_name: qingsong-nacos
     environment:

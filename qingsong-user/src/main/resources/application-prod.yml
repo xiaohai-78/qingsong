@@ -1,6 +1,0 @@
-spring:
-  application:
-    name: qingsong-user
-
-server:
-  port: 7892
