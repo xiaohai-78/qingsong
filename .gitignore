@@ -22,4 +22,9 @@ buildNumber.properties
 **/target/
 **/.gitignore
 
+docker/mysql
+docker/nacos-data
+docker/rabbitmq
+docker/redis
+
 .idea
