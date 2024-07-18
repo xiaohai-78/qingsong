@@ -23,3 +23,9 @@ spring:
 server:
   port:
     7962
+
+logging:
+  level:
+    com.xiaohai.qingsongorder.feign: debug
+
+

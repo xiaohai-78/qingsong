@@ -15,7 +15,7 @@ public class UserController {
 
     @PostMapping("/list")
     public String list(){
-        return "hello";
+        return "UserController say hello";
     }
 
 }
