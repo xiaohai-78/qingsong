@@ -6,8 +6,8 @@
         <groupId>com.xiaohai</groupId>
         <artifactId>qingsong</artifactId>
         <version>1.0.0</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.xiaohai</groupId>
     <artifactId>qingsong-ticket</artifactId>
     <version>1.0.0</version>

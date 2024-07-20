@@ -6,13 +6,9 @@
         <groupId>com.xiaohai</groupId>
         <artifactId>qingsong</artifactId>
         <version>1.0.0</version>
-        <relativePath/>
     </parent>
-    <groupId>com.xiaohai</groupId>
+
     <artifactId>qingsong-user</artifactId>
-    <version>1.0.0</version>
-    <name>qingsong-user</name>
-    <description>qingsong-user</description>
 
     <properties>
         <java.version>17</java.version>
@@ -43,11 +39,6 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
     </dependencies>
     <dependencyManagement>
